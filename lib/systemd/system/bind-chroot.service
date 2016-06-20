@@ -1,0 +1,13 @@
+[Unit]
+Description=BIND Domain Name Server in Chroot Enviroment
+Documentation=man:named(8)
+After=network.target
+After=named-chroot-setup.service
+
+[Service]
+ExecStart=/usr/sbin/named -f -u bind -t /var/lib/bind/chroot
+ExecReload=/usr/sbin/rndc reload
+ExecStop=/usr/sbin/rndc stop
+
+[Install]
+WantedBy=multi-user.target
