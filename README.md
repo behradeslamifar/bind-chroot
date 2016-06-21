@@ -2,7 +2,7 @@ BIND-CHROOT
 ================
 This is an edit of bind-chroot-9.9.4-29.el7.x86_64.rpm package from CentOS 7 for automate chrooted bind service in Debian Jessie.
 
-Auther
+Author
 ---------------
 Behrad Eslamifar <b.eslamifar@cvak.ir>
 
