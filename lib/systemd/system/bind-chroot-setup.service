@@ -1,0 +1,12 @@
+[Unit]
+Description=Set-up/destroy chroot environment for named (DNS)
+BindsTo=bind-chroot.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/bind-chroot/setup-bind-chroot.sh on
+ExecStop=/usr/lib/bind-chroot/setup-bind-chroot.sh off
+
+[Install]
+WantedBy=bind-chroot.service

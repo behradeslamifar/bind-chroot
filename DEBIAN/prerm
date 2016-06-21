@@ -1,0 +1,4 @@
+#!/bin/bash
+
+systemctl stop bind-chroot
+systemctl stop bind-chroot-setup

@@ -1,0 +1,8 @@
+Package: bind-chroot
+Version: 0.1
+Architecture: all
+Maintainer: Behrad Eslamifar <b.eslamifar@cvak.ir>
+Depends: bind9
+Section: net
+Priority: optional
+Description: Internet Domain Name Server on Chroot Enviroment

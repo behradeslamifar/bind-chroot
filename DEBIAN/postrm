@@ -1,0 +1,8 @@
+#!/bin/bash
+
+systemctl unmask bind9
+
+
+if [ "$1" = "purge" ]; then
+	rm -r /etc/rsyslog.d/bind-chroot.conf
+fi

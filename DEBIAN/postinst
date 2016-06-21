@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+chmod 775 /var/lib/bind/chroot/var/{cache/bind,run/named}
+chgrp bind /var/lib/bind/chroot/var/{cache/bind,run/named}
+
+systemctl enable bind-chroot-setup
+systemctl enable bind-chroot
+
+systemctl stop bind9
+systemctl mask bind9.service
+
+systemctl start bind-chroot
